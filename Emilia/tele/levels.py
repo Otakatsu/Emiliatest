@@ -1243,6 +1243,27 @@ async def manual_flush(event):
     await _flush_enhanced_buffers()
     await event.reply("✅ XP buffers flushed successfully!")
 
+# Debug command to check cache status
+@register(pattern="levelcache")
+async def check_level_cache(event):
+    """Check level cache status (admin only)"""
+    if not await is_admin(event, event.sender_id):
+        return
+    
+    chat_id = event.chat_id
+    cache_key = f"lvl:{chat_id}"
+    cached_value = _level_cache.get(cache_key)
+    db_value = await level.find_one({"chat_id": chat_id}) is not None
+    
+    await event.reply(
+        f"🔧 **Cache Debug Info**\n\n"
+        f"Chat ID: `{chat_id}`\n"
+        f"Cache Key: `{cache_key}`\n"
+        f"Cached Value: `{cached_value}`\n"
+        f"Database Value: `{db_value}`\n"
+        f"Function Result: `{await _get_level_on(chat_id)}`"
+    )
+
 # Stats command for admins
 @register(pattern="levelstats")
 async def level_system_stats(event):
@@ -1552,3 +1573,4 @@ async def start_levels_flush_task(interval_seconds: float = 3.0):
 
 # Initialize the system
 asyncio.create_task(initialize_level_system())
+

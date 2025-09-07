@@ -8,27 +8,27 @@ def get_user_list(config, key):
 
 
 class Config(object):
-    API_HASH = "45aabfac" # API_HASH from my.telegram.org
-    API_ID = 62 # API_ID from my.telegram.org
+    API_HASH = "45aabfaca930ac474279d9f20dd93a6d"
+    API_ID = 6799281
 
-    BOT_ID = 521 # BOT_ID
-    BOT_USERNAME = "Elf_Robot" # BOT_USERNAME
+    BOT_ID = 5737513498
+    BOT_USERNAME = "7692466190"
 
-    MONGO_DB_URL = "mongodb://username:password@localhost:27017/emi?directConnection=true&authSource=admin" # MongoDB URL from MongoDB Atlas
+    MONGO_DB_URL = "mongodb+srv://elianaapi:pranav8935@cluster0.gf5ky.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
+   
+    SUPPORT_CHAT = "SpiralTechDivision"
+    UPDATE_CHANNEL = "SpiralUpdates"
+    START_PIC = "https://pic-bstarstatic.akamaized.net/ugc/9e98b6c8872450f3e8b19e0d0aca02deff02981f.jpg@1200w_630h_1e_1c_1f.webp"
+    DEV_USERS = [6040984893, 6461051572, 7107018652]
+    TOKEN = "7692466190:AAHFzu94Fz2n2iGagIZb57gsxfzXriBNh80"
+    CLONE_LIMIT = 150
 
-    SUPPORT_CHAT = "SpiralTechDivision" # Support Chat Username
-    UPDATE_CHANNEL = "SpiralUpdates" # Update Channel Username
-    START_PIC = "https://pic-bstarstatic.akamaized.net/ugc/9e98b6c8872450f3e8b19e0d0aca02deff02981f.jpg@1200w_630h_1e_1c_1f.webp" # Start Image
-    DEV_USERS = [6040984893, 6461051572, 7107018652] # Dev Users
-    TOKEN = "57375" # Bot Token from @BotFather
-    CLONE_LIMIT = 50 # Number of clones your bot can make
+    EVENT_LOGS = -1001591010993
+    OWNER_ID = 6040984893
 
-    EVENT_LOGS = -10093 # Event Logs Chat ID
-    OWNER_ID = 6040984893 # Owner ID
- 
-    TEMP_DOWNLOAD_DIRECTORY = "./" # Temporary Download Directory
-    BOT_NAME = "Emilia" # Bot Name
-    WALL_API = "6950f53" # Wall API from wall.alphacoders.com
+    TEMP_DOWNLOAD_DIRECTORY = "./"
+    BOT_NAME = "Emilia"
+    WALL_API = "0"
 
 
 class Production(Config):

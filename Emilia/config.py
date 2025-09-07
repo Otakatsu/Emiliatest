@@ -14,7 +14,7 @@ class Config(object):
     BOT_ID = 5737513498
     BOT_USERNAME = "7692466190"
 
-    MONGO_DB_URL = "mongodb+srv://elianaapi:pranav8935@cluster0.gf5ky.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
+    MONGO_DB_URL = "mongodb+srv://pranav123:pranav123@cluster0.5obz9x7.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
    
     SUPPORT_CHAT = "SpiralTechDivision"
     UPDATE_CHANNEL = "SpiralUpdates"
